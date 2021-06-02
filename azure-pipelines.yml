@@ -10,8 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  workingDirectory: 'dotnet/aspnet/webappWithTests/Application/'
-  solution: '**/*.sln'
+  workingDirectory: '$(Agent.BuildDirectory)/s/dotnet/aspnet/webappWithTests/Application'
+  solution: '$(workingDirectory)/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 

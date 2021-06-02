@@ -10,8 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  workingDirectory: '$(Agent.BuildDirectory)/s/dotnet/aspnet/webappWithTests/Application'
-  solution: '$(workingDirectory)/*.sln'
+  applicationDirectory: '$(Agent.BuildDirectory)/s/dotnet/aspnet/webappWithTests/Application'
+  solution: '$(applicationDirectory)/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -33,3 +33,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    testFiltercriteria: "TestCategory=Nightly"

@@ -5,6 +5,7 @@ using System.Web.Mvc;
 namespace SampleWebApplication.UnitTests
 {
     [TestClass]
+    [TestCategory("UnitTests")]
     public class SampleUnitTests
     {
         [TestMethod]

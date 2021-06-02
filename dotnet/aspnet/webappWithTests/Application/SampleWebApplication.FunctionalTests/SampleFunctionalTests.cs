@@ -8,6 +8,7 @@ using System.Threading;
 namespace SampleWebApplication.FunctionalTests
 {
     [TestClass]
+    [TestCategory("FunctionalTests")]
     public class SampleFunctionalTests
     {
         private static TestContext testContext;
